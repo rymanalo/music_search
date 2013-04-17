@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicSearch</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="onepcssgrid-1000">
+  <header>
+    <h1> Eargasm </h1>
+  </header>
+
+<%= yield %>
+
+  <footer>
+    Copyright © <%= Time.now.year %>
+  </footer>
+</body>
+</html>
