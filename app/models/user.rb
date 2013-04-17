@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password
+  attr_accessible :name
 
   has_many :artists
 end
