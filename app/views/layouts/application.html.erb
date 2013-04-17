@@ -9,6 +9,10 @@
 <body class="onepcssgrid-1000">
   <header>
     <h1> Eargasm </h1>
+    <div id="sign_in_out">
+      <%= link_to "Sign In", user_session_path, :method => :post %>
+      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+    </div>
   </header>
 
 <%= yield %>

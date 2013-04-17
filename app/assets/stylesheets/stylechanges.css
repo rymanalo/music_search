@@ -12,6 +12,10 @@ h1 {
   font-size: 75px;
 }
 
+#sign_in_out {
+  float: right;
+}
+
 footer {
   text-align: center;
   margin: 100px;
