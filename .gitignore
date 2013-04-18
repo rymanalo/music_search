@@ -15,4 +15,4 @@
 /tmp
 
 # Ignore api keys.
-/config/initializers/api_keys.rb
+/config/initializers/api_keys.yaml
