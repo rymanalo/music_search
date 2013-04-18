@@ -1,4 +1,4 @@
-You sesarched for <%= @query %>
+You searched for <%= @query %>
 <p>
 Bio:
 <p>
@@ -9,3 +9,9 @@ Top Tracks:
 <% @response.artist_top_tracks.map do |track| %>
   <p><%= track %>
   <% end %>
+
+<p>
+
+<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/<%= @response.top_video %>?autoplay=1"
+  frameborder="0"/>

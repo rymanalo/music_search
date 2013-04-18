@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'youtube_search'
 
 group :production do
   gem 'pg'
