@@ -3,7 +3,7 @@
 Devise.setup do |config|
 
 
-  config.omniauth :facebook, ENV['fb_key'], ENV['fb_secret'], :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
+  config.omniauth :facebook, ENV['fb_key'], ENV['fb_secret']
 
 
   # ==> Mailer Configuration

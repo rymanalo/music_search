@@ -9,6 +9,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'youtube_search'
+gem 'certified'
+
 
 group :production do
   gem 'pg'
