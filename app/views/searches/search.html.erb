@@ -1,0 +1,11 @@
+You sesarched for <%= @query %>
+<p>
+Bio:
+<p>
+<%= @response.artist_bio %>
+<p>
+Top Tracks:
+<p>
+<% @response.artist_top_tracks.map do |track| %>
+  <p><%= track %>
+  <% end %>
