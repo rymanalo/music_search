@@ -8,5 +8,7 @@ MusicSearch::Application.routes.draw do
   root :to => 'searches#index'
   match "search", to: "searches#search"
 
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
 
 end
