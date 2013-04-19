@@ -21,11 +21,24 @@ footer {
   margin: 100px;
 }
 
-form {
+form, h4, #top_tracks {
   text-align: center;
 }
 
+#artist_pic {
+  text-align: center;
+  background-size: contain;
+}
 
-h1 {
-font-size: 75px;
+
+div#scroll {
+  border: 1px solid #1855ff;
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+  margin: 10px 0 50px 0;
+}
+
+span {
+  color: #e24054;
 }

@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+#gem 'omniauth-facebook', '1.4.0'
 gem 'youtube_search'
 gem 'certified'
 

@@ -1,19 +1,23 @@
-You searched for <%= @query %>
-<p>
-Bio:
-<p>
-<%= @response.artist_bio %>
-<p>
-Top Tracks:
-<p>
-<% @response.artist_top_tracks.map do |track| %>
-  <p><%= track %>
-  <% end %>
+You searched for: <h2>"<span><%= @query %></span>"</h2>
 
-<p>
+<div id="scroll" class="col12"><%= @response.artist_bio %></div>
 
-<iframe id="ytplayer" type="text/html" width="640" height="390"
-  src="http://www.youtube.com/v/<%= @response.top_video %>?version=3&autoplay=1&loop=1&playlist=zK1mLIeXwsQ,t7RyZ4Zf4Dk"
-  frameborder="0"/>
+<div class="col12" id="tracks_playlist">
 
+  <div class='col4' id='artist_pic'>
+    <img src='<%= @response.artist_image %>'/>
+  </div>
+
+  <div class="col4" id="top_tracks">
+    <h4>Top Tracks Playlist:</h4>
+      <% @response.artist_top_tracks.map do |track| %>
+        <p> <%= track %> </p>
+      <% end %>    
+  </div>
   
+  <div class="col3">
+    <iframe id="ytplayer" type="text/html" width="330" height="235"
+      src="http://www.youtube.com/v/<%= @top_video %>?version=3&autoplay=1&loop=1&playlist=<%= @top_video_playlist %>"
+      frameborder="0"/>
+  </div>
+</div>

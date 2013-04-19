@@ -9,7 +9,7 @@
 </head>
 <body class="onepcssgrid-1000">
   <header>
-    <h1> Eargasm </h1>
+    <h1>  <%= link_to 'Eargasm', root_path %> </h1>
     <div id="sign_in_out">
       <%= link_to "Sign In", user_session_path, :method => :post %>
       <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>

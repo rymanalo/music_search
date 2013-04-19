@@ -3,7 +3,7 @@
 Devise.setup do |config|
 
 
-  config.omniauth :facebook, ENV['fb_key'], ENV['fb_secret']
+  config.omniauth :facebook, ENV['fb_key'], ENV['fb_secret'], :strategy_class => OmniAuth::Strategies::Facebook, :scope => 'email,user_birthday,read_stream', :display => 'popup'
 
 
   # ==> Mailer Configuration
