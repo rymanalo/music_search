@@ -14,5 +14,8 @@ MusicSearch::Application.routes.draw do
   match "sorry", to: "searches#sorry"
 
 
+  get  '/email', :to => "mail#index"
+  post '/send_email', :to => "mail#send_email"
+
 
 end

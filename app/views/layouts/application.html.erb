@@ -10,7 +10,7 @@
 <body class="onepcssgrid-1000">
   <header>
     <h1>  <%= link_to 'Eargasm', root_path %> </h1>
-    <div id="sign_in_out">
+  <div id="sign_in_out">
       <%= link_to "Sign In", user_session_path, :method => :post %>
       <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
       <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
