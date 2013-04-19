@@ -11,6 +11,7 @@ gem 'omniauth-facebook'
 #gem 'omniauth-facebook', '1.4.0'
 gem 'youtube_search'
 gem 'certified'
+gem 'pry-rails'
 
 
 group :production do
