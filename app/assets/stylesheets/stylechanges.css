@@ -39,7 +39,7 @@ div#scroll {
   height: 200px;
   overflow: scroll;
   margin: 10px 0 50px 0;
-  line-height: 2;
+  line-height: 200%;
 }
 
 span {
