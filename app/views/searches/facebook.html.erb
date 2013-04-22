@@ -1,0 +1,11 @@
+<header><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></header>
+
+<h2>Favorite Music for <%= @current_user.name %></h2>
+
+
+
+   <% @music.each_with_index do |artist| %>
+
+      <p><a href="/search?q=<%= artist['name']%>" target="_blank"><%= artist['name']%></a></p>
+
+    <% end %>

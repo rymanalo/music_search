@@ -28,8 +28,8 @@ class Search < ActiveRecord::Base
   end
 
   def check_if_image_nil
-    file = open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV["echo_key"]}&name=#{URI.escape(@query)}&format=json&results=1&start=0&license=cc-by-sa")
-    JSON.load(file.read)["response"]["image"].nil?
+    file = open("http://developer.echonest.com/api/v4/artist/images?api_key=#{ENV["echo_key"]}&name=#{URI.escape(@query)}&format=json&results=1&start=0&license=unknown")
+    JSON.load(file.read)["response"]["images"][0].nil?
   end
 
   def artist_image

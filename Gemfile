@@ -12,6 +12,7 @@ gem 'omniauth-facebook'
 gem 'youtube_search'
 gem 'certified'
 gem 'pry-rails'
+gem 'koala'
 
 
 group :production do

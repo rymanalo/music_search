@@ -17,5 +17,6 @@ MusicSearch::Application.routes.draw do
   get  '/email', :to => "mail#index"
   post '/send_email', :to => "mail#send_email"
 
-
+  get '/facebook', :to => "searches#facebook"
+  get '/friends', :to => "searches#friends"
 end

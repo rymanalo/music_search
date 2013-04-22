@@ -5,7 +5,9 @@ You searched for: <h2>"<span><%= @query %></span>"</h2>
 <div class="col12" id="tracks_playlist">
 
   <div class='col4' id='artist_pic'>
+
     <% if @artist_image == true  %>
+
       <%= image_tag("no-photo.jpg") %>
     <% else %>
       <img src='<%= @response.artist_image %>'/>
