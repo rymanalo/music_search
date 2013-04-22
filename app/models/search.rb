@@ -17,6 +17,8 @@ class Search < ActiveRecord::Base
   end
 
   def artist_top_tracks
+    #file = open("http://developer.echonest.com/api/v4/artist/songs?api_key=#{ENV["echo_key"]}&name=#{URI.escape(@query)}&format=json&start=0&results=10")
+    #JSON.load(file.read)["response"]["songs"].map {|t| t['title']}
     file = open("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=#{URI.escape(@query)}&limit=10&api_key=#{ENV["lastfm_key"]}&format=json")
     JSON.load(file.read)['toptracks']['track'].map {|t| t['name']}
   end
