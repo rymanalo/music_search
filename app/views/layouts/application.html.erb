@@ -3,6 +3,7 @@
 <head>
   <title>MusicSearch</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
   
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,16 +13,16 @@
     <h1>  <%= link_to 'Eargasm', root_path %> </h1>
   <div id="sign_in_out">
     <% if user_signed_in? %>
-
       <img src='<%= @profile_pic %>'>
-
-      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <li><%= link_to "FaceBook Likes", '/facebook', :method => :get %>
     <% else %>
       <p><%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook) %>
     <% end %>
     </div>
   </header>
-
+<div class="clear">
+</div>
 <%= yield %>
 
   <footer>

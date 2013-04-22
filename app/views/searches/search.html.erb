@@ -1,3 +1,9 @@
+  <form action="/search" method="get">  
+  <input type="text" name="q" autofocus="" placeholder="Artist"> 
+  <br>
+  <button class="btn btn-primary btn-large">Search</button>
+</form>
+
 You searched for: <h2>"<span><%= @query %></span>"</h2>
 
 <div id="scroll" class="col12"><%= @response.artist_bio %></div>
@@ -5,9 +11,7 @@ You searched for: <h2>"<span><%= @query %></span>"</h2>
 <div class="col12" id="tracks_playlist">
 
   <div class='col4' id='artist_pic'>
-
     <% if @artist_image == true  %>
-
       <%= image_tag("no-photo.jpg") %>
     <% else %>
       <img src='<%= @response.artist_image %>'/>

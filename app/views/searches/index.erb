@@ -1,4 +1,3 @@
-<% unless !!@current_user %>
   <form action="/search" method="get">  
   <input type="text" name="q" autofocus="" placeholder="Artist"> 
   <br>
@@ -6,14 +5,9 @@
 </form>
 
 
-<% else %>
+<% if !!@current_user %>
   <%= form_tag("/facebook", :method => "get") do %>
   <h2> Welcome back, <%= @current_user.name %>!!! </h2>
     <%= submit_tag("My FaceBook Likes", :class => 'btn btn-primary btn-large')%>
   <% end %>
-    <form action="/search" method="get">  
-  <input type="text" name="q" autofocus="" placeholder="Artist"> 
-  <br>
-  <button class="btn btn-primary btn-large">Search</button>
-</form>
 <% end %>

@@ -10,6 +10,7 @@ header {
 
 h1 {
   font-size: 75px;
+  font-family: 'Caesar Dressing', cursive;
 }
 
 #sign_in_out {
@@ -23,6 +24,7 @@ footer {
 
 form, h4, #top_tracks, .facebook {
   text-align: center;
+  font-family: 'Caesar Dressing', cursive;
 }
 
 #artist_pic {
@@ -41,4 +43,12 @@ div#scroll {
 
 span {
   color: #e24054;
+}
+
+.clear {
+  clear: both;
+}
+
+a:hover{
+  background-color:yellow;
 }
