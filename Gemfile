@@ -15,11 +15,11 @@ gem 'pry-rails'
 gem 'koala'
 
 
+group :development, :test do
+  gem 'sqlite3'
+end
 group :production do
   gem 'pg'
-end
-group :development do
-  gem 'sqlite3'
 end
 
 
