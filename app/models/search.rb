@@ -6,9 +6,9 @@ class Search < ActiveRecord::Base
 
   end
 
-  def check_if_artist_nil
+  def check_if_artist_exists
     file = open("http://developer.echonest.com/api/v4/artist/biographies?api_key=#{ENV["echo_key"]}&name=#{URI.escape(@query)}&format=json&results=1&start=0&license=cc-by-sa")
-    JSON.load(file.read)["response"]["biographies"].nil?
+    JSON.load(file.read)["response"]["biographies"]
   end
 
   def artist_bio
