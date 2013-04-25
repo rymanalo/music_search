@@ -12,10 +12,10 @@ class SearchesController < ApplicationController
   end
 
   def search
-    @query = params[:q]
+    @query = params[:q].strip
     @response = Search.new(@query)
 
-    if (@response.check_if_artist_exists == []) || (@response.check_if_artist_exists.nil?)
+    if (@query == "") || (@response.check_if_artist_exists == []) || (@response.check_if_artist_exists.nil?)
       redirect_to :action => 'sorry', :q => params[:q]
     else
       @response.artist_bio
