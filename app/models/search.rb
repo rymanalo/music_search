@@ -1,9 +1,9 @@
 class Search < ActiveRecord::Base
   attr_accessible :query
 
+
   def initialize(q)
     @query = q
-
   end
 
   def check_if_artist_exists
