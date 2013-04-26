@@ -20,6 +20,7 @@ class SearchesController < ApplicationController
     else
       @response.artist_bio
       @response.artist_top_tracks
+      @fb_id = @response.facebook_id.gsub!(/\D+/, '')
       array = @response.top_videos_youtube_ids
       @top_video = array.shift
       @top_video_playlist = array.join(",")

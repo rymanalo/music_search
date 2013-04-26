@@ -1,7 +1,7 @@
 <%= render 'searchform' %>
 
 You searched for: <h2>"<span><%= @query %></span>"</h2>
-
+<a href="https://www.facebook.com/<%= @fb_id %>" target="_blank">Like them on FaceBook!</a>
 <div id="scroll" class="col12"><%= @response.artist_bio %></div>
 
 <div class="col12" id="tracks_playlist">
@@ -23,7 +23,6 @@ You searched for: <h2>"<span><%= @query %></span>"</h2>
   
   <div class="col3">
     <iframe id="ytplayer" type="text/html" width="330" height="235"
-      src="http://www.youtube.com/v/<%= @top_video %>?version=3&autoplay=1&loop=1&playlist=<%= @top_video_playlist %>"
-      frameborder="0"/>
+      src="http://www.youtube.com/embed/<%= @top_video %>?autoplay=1&loop=1&playlist=<%= @top_video_playlist %>" frameborder="0"/>
   </div>
 </div>

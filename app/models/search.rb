@@ -38,4 +38,9 @@ class Search < ActiveRecord::Base
     file = open("http://developer.echonest.com/api/v4/artist/images?api_key=#{ENV["echo_key"]}&name=#{URI.escape(@query)}&format=json&results=1&start=0&license=unknown")
     JSON.load(file.read)["response"]["images"][0]['url']
   end
+
+  def facebook_id
+    file = open("http://developer.echonest.com/api/v4/artist/profile?api_key=#{ENV["echo_key"]}&name=#{URI.escape(@query)}&format=json&bucket=id:facebook")
+    JSON.load(file.read)["response"]["artist"]["foreign_ids"][0]['foreign_id']
+  end
 end
