@@ -17,6 +17,8 @@ gem 'koala'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'simplecov'
 end
 group :production do
   gem 'pg'

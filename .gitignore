@@ -16,3 +16,5 @@
 
 # Ignore api keys.
 /config/initializers/api_keys.yaml
+
+/coverage
